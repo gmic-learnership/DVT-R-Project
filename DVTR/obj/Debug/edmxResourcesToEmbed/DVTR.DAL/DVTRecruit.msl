@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DvtRecruitModelStoreContainer" CdmEntityContainer="DvtRecruitEntities">
+    <EntitySetMapping Name="ApplicantContracts">
+      <EntityTypeMapping TypeName="DvtRecruitModel.ApplicantContract">
+        <MappingFragment StoreEntitySet="ApplicantContract">
+          <ScalarProperty Name="ApplicantContractId" ColumnName="ApplicantContractId" />
+          <ScalarProperty Name="CurrentGrossSalary" ColumnName="CurrentGrossSalary" />
+          <ScalarProperty Name="CurrentPerfomanceBonus" ColumnName="CurrentPerfomanceBonus" />
+          <ScalarProperty Name="MedicalAidEmpContribution" ColumnName="MedicalAidEmpContribution" />
+          <ScalarProperty Name="MedicalAidIndContribution" ColumnName="MedicalAidIndContribution" />
+          <ScalarProperty Name="ProvidentPensionEmpContribution" ColumnName="ProvidentPensionEmpContribution" />
+          <ScalarProperty Name="ProvidentPensionIndContribution" ColumnName="ProvidentPensionIndContribution" />
+          <ScalarProperty Name="OtherEmpContribution" ColumnName="OtherEmpContribution" />
+          <ScalarProperty Name="OtherIndContribution" ColumnName="OtherIndContribution" />
+          <ScalarProperty Name="CurrentEmplTypeId" ColumnName="CurrentEmplTypeId" />
+          <ScalarProperty Name="ExpectedEmpTypeId" ColumnName="ExpectedEmpTypeId" />
+          <ScalarProperty Name="NoticePeriod" ColumnName="NoticePeriod" />
+          <ScalarProperty Name="PermanentSalaryExpectation" ColumnName="PermanentSalaryExpectation" />
+          <ScalarProperty Name="ContractSalaryExpectation" ColumnName="ContractSalaryExpectation" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RecentlySentCvToOtherComp" ColumnName="RecentlySentCvToOtherComp" />
+          <ScalarProperty Name="InterviewsScheduled" ColumnName="InterviewsScheduled" />
+          <ScalarProperty Name="ReasonLeavingCurrentComp" ColumnName="ReasonLeavingCurrentComp" />
+          <ScalarProperty Name="PreferredEnviroment" ColumnName="PreferredEnviroment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantInfoes">
+      <EntityTypeMapping TypeName="DvtRecruitModel.ApplicantInfo">
+        <MappingFragment StoreEntitySet="ApplicantInfo">
+          <ScalarProperty Name="ApplicantInfoId" ColumnName="ApplicantInfoId" />
+          <ScalarProperty Name="WorkPermitNumber" ColumnName="WorkPermitNumber" />
+          <ScalarProperty Name="WorkPermitEndDate" ColumnName="WorkPermitEndDate" />
+          <ScalarProperty Name="Health" ColumnName="Health" />
+          <ScalarProperty Name="DriversLicense" ColumnName="DriversLicense" />
+          <ScalarProperty Name="OwnTransport" ColumnName="OwnTransport" />
+          <ScalarProperty Name="OtherLaguages" ColumnName="OtherLaguages" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="CurrentWorkLocation" ColumnName="CurrentWorkLocation" />
+          <ScalarProperty Name="CurrentJobTitle" ColumnName="CurrentJobTitle" />
+          <ScalarProperty Name="PreferredJobTitle" ColumnName="PreferredJobTitle" />
+          <ScalarProperty Name="PrefJhbCbd" ColumnName="PrefJhbCbd" />
+          <ScalarProperty Name="PrefJhbNorth" ColumnName="PrefJhbNorth" />
+          <ScalarProperty Name="PrefJhbSouth" ColumnName="PrefJhbSouth" />
+          <ScalarProperty Name="PrefJhbWest" ColumnName="PrefJhbWest" />
+          <ScalarProperty Name="PrefMidrand" ColumnName="PrefMidrand" />
+          <ScalarProperty Name="PrefPretoria" ColumnName="PrefPretoria" />
+          <ScalarProperty Name="RelocateRsa" ColumnName="RelocateRsa" />
+          <ScalarProperty Name="RelocateInternational" ColumnName="RelocateInternational" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="DvtRecruitModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackgroundChecks">
+      <EntityTypeMapping TypeName="DvtRecruitModel.BackgroundCheck">
+        <MappingFragment StoreEntitySet="BackgroundChecks">
+          <ScalarProperty Name="BackgroundCheckId" ColumnName="BackgroundCheckId" />
+          <ScalarProperty Name="Convictions" ColumnName="Convictions" />
+          <ScalarProperty Name="CriminalRecord" ColumnName="CriminalRecord" />
+          <ScalarProperty Name="CcmaCase" ColumnName="CcmaCase" />
+          <ScalarProperty Name="FraudCase" ColumnName="FraudCase" />
+          <ScalarProperty Name="CreditRecord" ColumnName="CreditRecord" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educations">
+      <EntityTypeMapping TypeName="DvtRecruitModel.Education">
+        <MappingFragment StoreEntitySet="Education">
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+          <ScalarProperty Name="EducationType" ColumnName="EducationType" />
+          <ScalarProperty Name="Institution" ColumnName="Institution" />
+          <ScalarProperty Name="YearCompleted" ColumnName="YearCompleted" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmploymentTypes">
+      <EntityTypeMapping TypeName="DvtRecruitModel.EmploymentType">
+        <MappingFragment StoreEntitySet="EmploymentType">
+          <ScalarProperty Name="EmploymentTypeId" ColumnName="EmploymentTypeId" />
+          <ScalarProperty Name="EmploymentType1" ColumnName="EmploymentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="DvtRecruitModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="Gender1" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NextOfKins">
+      <EntityTypeMapping TypeName="DvtRecruitModel.NextOfKin">
+        <MappingFragment StoreEntitySet="NextOfKin">
+          <ScalarProperty Name="NextOfKinId" ColumnName="NextOfKinId" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="DvtRecruitModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="Maidenname" ColumnName="Maidenname" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="RaceID" ColumnName="RaceID" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="HomeLanguage" ColumnName="HomeLanguage" />
+          <ScalarProperty Name="PhysicalAddress" ColumnName="PhysicalAddress" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="AlternativeNumber" ColumnName="AlternativeNumber" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectSynopsis">
+      <EntityTypeMapping TypeName="DvtRecruitModel.ProjectSynopsi">
+        <MappingFragment StoreEntitySet="ProjectSynopsis">
+          <ScalarProperty Name="ProjectSynopsisId" ColumnName="ProjectSynopsisId" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="RoleOnProject" ColumnName="RoleOnProject" />
+          <ScalarProperty Name="ProjectDuration" ColumnName="ProjectDuration" />
+          <ScalarProperty Name="PrimaryStakeholders" ColumnName="PrimaryStakeholders" />
+          <ScalarProperty Name="ArtifactsProdused" ColumnName="ArtifactsProdused" />
+          <ScalarProperty Name="Methodologies" ColumnName="Methodologies" />
+          <ScalarProperty Name="TaskResponsibility" ColumnName="TaskResponsibility" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Races">
+      <EntityTypeMapping TypeName="DvtRecruitModel.Race">
+        <MappingFragment StoreEntitySet="Race">
+          <ScalarProperty Name="RaceId" ColumnName="RaceId" />
+          <ScalarProperty Name="Race1" ColumnName="Race" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="References">
+      <EntityTypeMapping TypeName="DvtRecruitModel.Reference">
+        <MappingFragment StoreEntitySet="References">
+          <ScalarProperty Name="ReferenceId" ColumnName="ReferenceId" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ReportDirectly" ColumnName="ReportDirectly" />
+          <ScalarProperty Name="RefereeJobTitle" ColumnName="RefereeJobTitle" />
+          <ScalarProperty Name="CanidateJobTitle" ColumnName="CanidateJobTitle" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DvtRecruitModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

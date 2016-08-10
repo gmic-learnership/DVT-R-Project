@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c48f09c504684638ae2c3f0723f25f20" Name="Diagram1">
+        <EntityTypeShape EntityType="DvtRecruitModel.ApplicantContract" Width="1.5" PointX="8.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.ApplicantInfo" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.Application" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.BackgroundCheck" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.Education" Width="1.5" PointX="5.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.EmploymentType" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.Gender" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.NextOfKin" Width="1.5" PointX="5.25" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.Person" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.ProjectSynopsi" Width="1.5" PointX="5.25" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.Race" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.Reference" Width="1.5" PointX="5.25" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DvtRecruitModel.User" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <AssociationConnector Association="DvtRecruitModel.FK_ApplicantContract_EmploymentType" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_ApplicantContract_EmploymentType1" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_ApplicantContract_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_ApplicantInfo_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_Application_Person1" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_BackgroundChecks_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_Education_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_Person_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_NextOfKin_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_Person_Race" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_Person_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_ProjectSynopsis_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="DvtRecruitModel.FK_References_Person" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

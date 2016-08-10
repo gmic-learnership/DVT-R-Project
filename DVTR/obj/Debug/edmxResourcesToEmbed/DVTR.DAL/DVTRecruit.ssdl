@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DvtRecruitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ApplicantContract">
+    <Key>
+      <PropertyRef Name="ApplicantContractId" />
+    </Key>
+    <Property Name="ApplicantContractId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrentGrossSalary" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CurrentPerfomanceBonus" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MedicalAidEmpContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MedicalAidIndContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProvidentPensionEmpContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProvidentPensionIndContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OtherEmpContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OtherIndContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CurrentEmplTypeId" Type="int" Nullable="false" />
+    <Property Name="ExpectedEmpTypeId" Type="int" Nullable="false" />
+    <Property Name="NoticePeriod" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PermanentSalaryExpectation" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ContractSalaryExpectation" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="RecentlySentCvToOtherComp" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="InterviewsScheduled" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReasonLeavingCurrentComp" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PreferredEnviroment" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApplicantInfo">
+    <Key>
+      <PropertyRef Name="ApplicantInfoId" />
+    </Key>
+    <Property Name="ApplicantInfoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkPermitNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WorkPermitEndDate" Type="date" Nullable="false" />
+    <Property Name="Health" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DriversLicense" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OwnTransport" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OtherLaguages" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="CurrentWorkLocation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CurrentJobTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PreferredJobTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrefJhbCbd" Type="bit" Nullable="false" />
+    <Property Name="PrefJhbNorth" Type="bit" Nullable="false" />
+    <Property Name="PrefJhbSouth" Type="bit" Nullable="false" />
+    <Property Name="PrefJhbWest" Type="bit" Nullable="false" />
+    <Property Name="PrefMidrand" Type="bit" Nullable="false" />
+    <Property Name="PrefPretoria" Type="bit" Nullable="false" />
+    <Property Name="RelocateRsa" Type="bit" Nullable="false" />
+    <Property Name="RelocateInternational" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicationDate" Type="date" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BackgroundChecks">
+    <Key>
+      <PropertyRef Name="BackgroundCheckId" />
+    </Key>
+    <Property Name="BackgroundCheckId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Convictions" Type="bit" Nullable="false" />
+    <Property Name="CriminalRecord" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="CcmaCase" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="FraudCase" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreditRecord" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Other" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="EducationId" />
+    </Key>
+    <Property Name="EducationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EducationType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Institution" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="YearCompleted" Type="date" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmploymentType">
+    <Key>
+      <PropertyRef Name="EmploymentTypeId" />
+    </Key>
+    <Property Name="EmploymentTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmploymentType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Name="GenderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NextOfKin">
+    <Key>
+      <PropertyRef Name="NextOfKinId" />
+    </Key>
+    <Property Name="NextOfKinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Relationship" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maidenname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Fullname" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdentityNumber" Type="int" Nullable="false" />
+    <Property Name="GenderId" Type="int" Nullable="false" />
+    <Property Name="RaceID" Type="int" Nullable="false" />
+    <Property Name="DateOfBirth" Type="date" Nullable="false" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HomeLanguage" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhysicalAddress" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="AlternativeNumber" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjectSynopsis">
+    <Key>
+      <PropertyRef Name="ProjectSynopsisId" />
+    </Key>
+    <Property Name="ProjectSynopsisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectDescription" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="RoleOnProject" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectDuration" Type="int" Nullable="false" />
+    <Property Name="PrimaryStakeholders" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ArtifactsProdused" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Methodologies" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TaskResponsibility" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Race">
+    <Key>
+      <PropertyRef Name="RaceId" />
+    </Key>
+    <Property Name="RaceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Race" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="References">
+    <Key>
+      <PropertyRef Name="ReferenceId" />
+    </Key>
+    <Property Name="ReferenceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ReportDirectly" Type="bit" Nullable="false" />
+    <Property Name="RefereeJobTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CanidateJobTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Period" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ApplicantContract_EmploymentType">
+    <End Role="EmploymentType" Type="Self.EmploymentType" Multiplicity="1" />
+    <End Role="ApplicantContract" Type="Self.ApplicantContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmploymentType">
+        <PropertyRef Name="EmploymentTypeId" />
+      </Principal>
+      <Dependent Role="ApplicantContract">
+        <PropertyRef Name="CurrentEmplTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicantContract_EmploymentType1">
+    <End Role="EmploymentType" Type="Self.EmploymentType" Multiplicity="1" />
+    <End Role="ApplicantContract" Type="Self.ApplicantContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmploymentType">
+        <PropertyRef Name="EmploymentTypeId" />
+      </Principal>
+      <Dependent Role="ApplicantContract">
+        <PropertyRef Name="ExpectedEmpTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicantContract_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="ApplicantContract" Type="Self.ApplicantContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="ApplicantContract">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicantInfo_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="ApplicantInfo" Type="Self.ApplicantInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="ApplicantInfo">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Application_Person1">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BackgroundChecks_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="BackgroundChecks" Type="Self.BackgroundChecks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="BackgroundChecks">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Education_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Education" Type="Self.Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NextOfKin_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="NextOfKin" Type="Self.NextOfKin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="NextOfKin">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Person" Type="Self.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Race">
+    <End Role="Race" Type="Self.Race" Multiplicity="1" />
+    <End Role="Person" Type="Self.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="RaceId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="RaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Person" Type="Self.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSynopsis_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="ProjectSynopsis" Type="Self.ProjectSynopsis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="ProjectSynopsis">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_References_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="References" Type="Self.References" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="References">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DvtRecruitModelStoreContainer">
+    <EntitySet Name="ApplicantContract" EntityType="Self.ApplicantContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantInfo" EntityType="Self.ApplicantInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackgroundChecks" EntityType="Self.BackgroundChecks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmploymentType" EntityType="Self.EmploymentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NextOfKin" EntityType="Self.NextOfKin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectSynopsis" EntityType="Self.ProjectSynopsis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Race" EntityType="Self.Race" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="References" EntityType="Self.References" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ApplicantContract_EmploymentType" Association="Self.FK_ApplicantContract_EmploymentType">
+      <End Role="EmploymentType" EntitySet="EmploymentType" />
+      <End Role="ApplicantContract" EntitySet="ApplicantContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicantContract_EmploymentType1" Association="Self.FK_ApplicantContract_EmploymentType1">
+      <End Role="EmploymentType" EntitySet="EmploymentType" />
+      <End Role="ApplicantContract" EntitySet="ApplicantContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicantContract_Person" Association="Self.FK_ApplicantContract_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="ApplicantContract" EntitySet="ApplicantContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicantInfo_Person" Association="Self.FK_ApplicantInfo_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="ApplicantInfo" EntitySet="ApplicantInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Application_Person1" Association="Self.FK_Application_Person1">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BackgroundChecks_Person" Association="Self.FK_BackgroundChecks_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="BackgroundChecks" EntitySet="BackgroundChecks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Education_Person" Association="Self.FK_Education_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Education" EntitySet="Education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NextOfKin_Person" Association="Self.FK_NextOfKin_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="NextOfKin" EntitySet="NextOfKin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Gender" Association="Self.FK_Person_Gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Race" Association="Self.FK_Person_Race">
+      <End Role="Race" EntitySet="Race" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_User" Association="Self.FK_Person_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSynopsis_Person" Association="Self.FK_ProjectSynopsis_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="ProjectSynopsis" EntitySet="ProjectSynopsis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_References_Person" Association="Self.FK_References_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="References" EntitySet="References" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
