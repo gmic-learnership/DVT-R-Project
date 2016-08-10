@@ -117,6 +117,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="DatabaseBackUp\DvtRecruit.bak" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -225,6 +226,30 @@
     <Content Include="Views\Application\SavePerson.cshtml" />
     <Content Include="Views\Application\SaveContract.cshtml" />
     <Content Include="Views\Application\SaveProjectSynopsis.cshtml" />
+    <Content Include="Views\Update\ApplicantInformation.cshtml" />
+    <Content Include="Views\Update\NextOfKin.cshtml" />
+    <Content Include="Views\Update\ProjectSynopsis.cshtml" />
+    <Content Include="Views\Update\UpdateEducation.cshtml" />
+    <Content Include="Views\Update\UpdatePerson.cshtml" />
+    <Content Include="Views\Home\ApplicantContract.cshtml" />
+    <Content Include="Views\Home\ApplicantInfo.cshtml" />
+    <Content Include="Views\Home\Application.cshtml" />
+    <Content Include="Views\Home\BackgroundCheck.cshtml" />
+    <Content Include="Views\Home\DvtForm.cshtml" />
+    <Content Include="Views\Home\Education.cshtml" />
+    <Content Include="Views\Home\EmploymentType.cshtml" />
+    <Content Include="Views\Home\Gender.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\LoggedInMenu.cshtml" />
+    <Content Include="Views\Home\login.cshtml" />
+    <Content Include="Views\Home\NextOfKin.cshtml" />
+    <Content Include="Views\Home\Person.cshtml" />
+    <Content Include="Views\Home\ProjectSynopsis.cshtml" />
+    <Content Include="Views\Home\Race.cshtml" />
+    <Content Include="Views\Home\References.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\RetrieveInformation.cshtml" />
+    <Content Include="Views\Home\UpdateMainMenu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -235,8 +260,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
-    <Folder Include="Views\Update\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
