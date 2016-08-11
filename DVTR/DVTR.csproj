@@ -137,12 +137,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\UpdateController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DVTR.BL\InsertRepo.cs" />
     <Compile Include="DVTR.BL\LoginMethod.cs" />
+    <Compile Include="DVTR.BL\RetreiveRepo.cs" />
     <Compile Include="DVTR.BL\UpdateRepo.cs" />
     <Compile Include="DVTR.BL\UserRepository.cs" />
     <Compile Include="DVTR.Core\IUserRepository.cs" />
@@ -253,6 +255,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

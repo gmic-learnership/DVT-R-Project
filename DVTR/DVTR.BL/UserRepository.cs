@@ -40,5 +40,10 @@ namespace DVTR.DVTR.BL
                 }
             
         }
+        public List<Education> GetUserEductionList(int personID)
+        {
+            return db.Educations.Where(u => u.PersonId.Equals(personID)).ToList();
+        }
+
     }
 }

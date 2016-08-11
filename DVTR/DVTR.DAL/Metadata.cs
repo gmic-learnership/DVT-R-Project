@@ -178,7 +178,7 @@ namespace DVTR.Models
 
     public class EducationMetadata
     {
-        [Required]
+        
         public int EducationId { get; set; }
         [Required, Display(Name = "Qualification")]
         public string EducationType { get; set; }
@@ -186,8 +186,9 @@ namespace DVTR.Models
         public string Institution { get; set; }
         [Required, Display(Name = "year Completed"), DataType(DataType.Date)]
         public System.DateTime YearCompleted { get; set; }
-        [Required]
+       
         public int PersonId { get; set; }
+
     }
 
     public class NextOfKinMetadata
