@@ -44,6 +44,7 @@ namespace DVTR.Controllers
                         repo.AddUser(user);
                         repo.Save();
                         return RedirectToAction("SuccessMessage");
+                        
                     }
                     catch {
                         return RedirectToAction("SignUp", new { failed = true });
