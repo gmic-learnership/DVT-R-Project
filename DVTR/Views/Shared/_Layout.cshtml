@@ -35,21 +35,23 @@
             <div class="col-md-2">
                 <img src="~/Content/images/dvt-academy-white.png" alt="DVT RECRUITMENT" style="display:block; width:100%; height:auto; margin:0 auto;" />
             </div>
+
+    @if (Session["personId"] != null)
+    {
             <div class="col-md-7 space">
                 <ul class="list-unstyled list-inline">
                     <li><a href="~/Application/SavePerson" onclick="openCity(event, 'Form')">APPLY</a></li>
-                    <li><a href="~/Home/UpdateMainMenu" onclick="openCity(event, 'Form')">UPDATE INFORMATION</a></li>
-                    <li><a href="~/Application/SavePerson" onclick="openCity(event, 'Form')">ADD INFORMATION</a></li>
-                    <li><a href="~/Home/UpdateMainMenu" onclick="openCity(event, 'Form')">UPDATE INFORMATION</a></li>
+                    <li><a href="~/Home/UpdateMainMenu" onclick="openCity(event, 'Form')">UPDATE APPLICATION</a></li>
+                    
                 </ul>
             </div>
-
+    }
 
             @{
                 if (Session["personId"] != null)
                 {
                     <div class="col-md-3 space pull-right">
-                        Welcome <strong>@Session["Name"]</strong>, <a href="~/Views/Application/" style="font-weight:bold; text-decoration:underline;">Logout</a>.
+                        Welcome <strong>@Session["Name"]</strong>, <a href="~/Home/logout" style="font-weight:bold; text-decoration:underline;">Logout</a>.
                     </div>
                 }
             }
