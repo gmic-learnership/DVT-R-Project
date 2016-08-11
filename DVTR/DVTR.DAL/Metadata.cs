@@ -22,9 +22,9 @@ namespace DVTR.Models
         public string UserName { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "Password must be numeric")]
+        //[RegularExpression("^[0-9]*$", ErrorMessage = "Password must be numeric")]
         //  [Range(0, 12, ErrorMessage = "Please enter password range that is between 6 and 12")]
-        [StringLength(12, MinimumLength = 6, ErrorMessage = "Please enter 6 - 12 numbers only")]
+        [StringLength(49, MinimumLength = 6, ErrorMessage = "Please enter 6 - 12 characters only")]
         public string Password { get; set; }
     }
 
