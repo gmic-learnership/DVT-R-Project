@@ -101,6 +101,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\06.jpg" />
+    <Content Include="Content\images\07.jpg" />
+    <Content Include="Content\images\08.jpg" />
+    <Content Include="Content\images\09.jpg" />
     <Content Include="Content\images\dvt-academy-white.png" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\Site.css" />

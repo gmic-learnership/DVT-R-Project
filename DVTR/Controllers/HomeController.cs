@@ -154,6 +154,8 @@ namespace DVTR.Controllers
                         FormsAuthentication.SetAuthCookie(Getuser.UserName, false);
 
                         Session["Username"] = item.UserId;
+                        Session["Name"] = item.FirstName;
+
 
                         return RedirectToAction("LoggedInMenu");
                     }
