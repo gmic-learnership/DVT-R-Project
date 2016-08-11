@@ -21,9 +21,15 @@ namespace DVTR.Controllers
             return View();
         }
 
-        public ActionResult SignUp()
+        public ActionResult SignUp(bool? failed)
         {
-            return View(new User());
+            User user = new DVTR.DAL.User();
+
+            if (failed != null)
+            {
+                user.RegistrationFailed = true;
+            }
+            return View(user);
         }
 
         [HttpPost]
@@ -33,9 +39,15 @@ namespace DVTR.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    repo.AddUser(user);
-                    repo.Save();
-                    return RedirectToAction("login");
+                    try
+                    {
+                        repo.AddUser(user);
+                        repo.Save();
+                        return RedirectToAction("SuccessMessage");
+                    }
+                    catch {
+                        return RedirectToAction("SignUp", new { failed = true });
+                    }
                 }
             }
             catch (Exception )
@@ -74,6 +86,14 @@ namespace DVTR.Controllers
                 }
             }
             return View(Getuser);
+        }
+
+        public ActionResult SuccessMessage()
+        {
+            //string message = "You've successfully registered";
+            //ViewBag.Message = 
+            ViewBag.massage = "successfully registered";
+           return View();
         }
     }
 }

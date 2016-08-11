@@ -58,7 +58,7 @@
         <div class="form-group">
             <label class="col-md-4">Other languages</label>
             <div class="col-md-8">
-                @Html.EditorFor(model => model.OtherLaguages, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("languages", new SelectList(Enum.GetValues(typeof(DVTR.Models.EnumClass.languages))), "Select Language", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.OtherLaguages, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -87,6 +87,15 @@
                 @Html.ValidationMessageFor(model => model.PreferredJobTitle, "", new { @class = "text-danger" })
             </div>
         </div>
+        @{
+            var jhbSouth = Model.PrefJhbSouth != null ? (object)new { @checked = "checked" } : (object)new { };
+            var jhbNorth = Model.PrefJhbNorth != null ? (object)new { @checked = "checked" } : (object)new { };
+            //var jhbSouth = Model.PrefJhbSouth != null ? (object)new { @checked = "checked" } : (object)new { };
+           // var jhbSouth = Model.PrefJhbSouth != null ? (object)new { @checked = "checked" } : (object)new { };
+           // var jhbSouth = Model.PrefJhbSouth != null ? (object)new { @checked = "checked" } : (object)new { };
+
+        }
+
         <div class="row">
             <label class="col-md-12">Preffered work location:</label>
         </div>
@@ -94,28 +103,34 @@
             <label class="col-md-4">JHB CBD</label>
             <div class="col-md-4">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.PrefJhbCbd)
+                    @Html.CheckBoxFor(model => model.PrefJhbCbd.HasValue, new { id = "employmentType_" })
                     @Html.ValidationMessageFor(model => model.PrefJhbCbd, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
 
+
+
         <div class="form-group">
             <label class="col-md-4">JHB North</label>
             <div class="col-md-4">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.PrefJhbNorth)
+                    @Html.CheckBox("PrefJhbNorth", jhbNorth)
                     @Html.ValidationMessageFor(model => model.PrefJhbNorth, "", new { @class = "text-danger" })
                 </div>
             </div>
-        </div>
+            </div>
+        
 
         <div class="form-group">
             <label class="col-md-4">JHB South</label>
             <div class="col-md-4">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.PrefJhbSouth)
+                    @*<input type="checkbox" value="@Model.PrefJhbSouth" id="employmentType_" , name="MyTestJhb" />*@
+                   
+                    @Html.CheckBox("PrefJhbSouth",jhbSouth)
                     @Html.ValidationMessageFor(model => model.PrefJhbSouth, "", new { @class = "text-danger" })
+
                 </div>
             </div>
         </div>
@@ -124,7 +139,7 @@
             <label class="col-md-4">JHB West</label>
             <div class="col-md-4">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.PrefJhbWest)
+                    @Html.CheckBoxFor(model => model.PrefJhbWest.HasValue, new { id = "employmentType_" })
                     @Html.ValidationMessageFor(model => model.PrefJhbWest, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -134,17 +149,17 @@
             <label class="col-md-4">Midrand</label>
             <div class="col-md-4">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.PrefMidrand)
+                    @Html.CheckBoxFor(model => model.PrefMidrand.HasValue, new { id = "employmentType_" })
                     @Html.ValidationMessageFor(model => model.PrefMidrand, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-md-4">Pretoria</label>
+            <label class="col-md-4">Pretoria</label>    
             <div class="col-md-4">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.PrefPretoria)
+                    @Html.CheckBoxFor(model => model.PrefPretoria.HasValue , new { id = "employmentType_" ,name= "PrefJhbSouth" })
                     @Html.ValidationMessageFor(model => model.PrefPretoria, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -156,7 +171,7 @@
                 <div class="checkbox">
                     @Html.EditorFor(model => model.RelocateRsa)
                     @Html.ValidationMessageFor(model => model.RelocateRsa, "", new { @class = "text-danger" })
-                </div>
+                </div>.
             </div>
         </div>
 

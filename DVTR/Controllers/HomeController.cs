@@ -17,106 +17,106 @@ namespace DVTR.Controllers
             return View();
         }
 
-        public ActionResult EmploymentType()
-        {
-            return View();
-        }
+        //public ActionResult EmploymentType()
+        //{
+        //    return View();
+        //}
 
 
-        public ActionResult Person()
-        {
-            return View();
-        }
+        //public ActionResult Person()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult NextOfKin()
-        {
-            return View();
-        }
+        //public ActionResult NextOfKin()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult ProjectSynopsis()
-        {
-            return View();
-        }
+        //public ActionResult ProjectSynopsis()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult References()
-        {
-            return View();
-        }
-
-
+        //public ActionResult References()
+        //{
+        //    return View();
+        //}
 
 
-        public ActionResult DvtForm()
-        {
-            return View();
-        }
-
-        public ActionResult ApplicantInfo()
-        {
-            return View();
-        }
-
-        public ActionResult ApplicantContract()
-        {
-            return View();
-        }
-
-        public ActionResult Application()
-        {
-            return View();
-        }
-
-        public ActionResult BackgroundCheck()
-        {
-            return View();
-        }
-
-        public ActionResult Education()
-        {
-            return View();
-        }
 
 
-        public ActionResult NectOfKin()
-        {
-            return View();
-        }
+        //public ActionResult DvtForm()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult ApplicantInfo()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult ApplicantContract()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult Application()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult BackgroundCheck()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult Education()
+        //{
+        //    return View();
+        //}
 
 
-        // GET: /User/ 
-        public ActionResult Register()
-        {
-            return View();
-        }
+        //public ActionResult NectOfKin()
+        //{
+        //    return View();
+        //}
 
-        [HttpPost]
 
-        [ValidateAntiForgeryToken]
+        //// GET: /User/ 
+        //public ActionResult Register()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult Register(User U)
+        //[HttpPost]
 
-        {
-            using (DvtRecruitEntities dc = new DvtRecruitEntities())
-            {
+        //[ValidateAntiForgeryToken]
 
-                if (ModelState.IsValid)
+        //public ActionResult Register(User U)
 
-                {
+        //{
+        //    using (DvtRecruitEntities dc = new DvtRecruitEntities())
+        //    {
 
-                    dc.Users.Add(U);
+        //        if (ModelState.IsValid)
 
-                    dc.SaveChanges();
+        //        {
 
-                    //ModelState.Clear();
+        //            dc.Users.Add(U);
 
-                    //U = null;
+        //            dc.SaveChanges();
 
-                    ViewBag.Message = "Successfully Registration Done";
+        //            //ModelState.Clear();
 
-                }
-                return RedirectToAction("Index");
-            }
-        }
+        //            //U = null;
+
+        //            ViewBag.Message = "Successfully Registration Done";
+
+        //        }
+        //        return RedirectToAction("Index");
+        //    }
+        //}
         public ActionResult login()
         {
             return View();

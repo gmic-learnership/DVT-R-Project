@@ -3,14 +3,14 @@
     ViewBag.Title = "SavePerson";
 }
 
-<h2>SavePerson</h2>
+<h2>Personal Information</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Applicant Information</h4>
+      
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -80,7 +80,8 @@
             <div class="form-group">
                 <label class="col-md-4">Home Language</label>
                 <div class="col-md-8">
-                    @Html.EditorFor(model => model.HomeLanguage, new { htmlAttributes = new { @class = "form-control" } })
+                   @Html.DropDownList("languages", new SelectList(Enum.GetValues(typeof(DVTR.Models.EnumClass.languages ))), "Select Language", new { @class = "form-control" })
+                   @* @Html.EditorFor(model => model.HomeLanguage, new { htmlAttributes = new { @class = "form-control" } })*@
                     @Html.ValidationMessageFor(model => model.HomeLanguage, "", new { @class = "text-danger" })
                 </div>
             </div>

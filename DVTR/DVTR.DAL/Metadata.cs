@@ -52,13 +52,13 @@ namespace DVTR.Models
         [DisplayFormat(DataFormatString = "{YYYY/MM/dd}")]
         public System.DateTime DateOfBirth { get; set; }
         [Required]
-       //  [RegularExpression("^[0-9]*$", ErrorMessage = "Cellphone must be numeric")]
+        //  [RegularExpression("^[0-9]*$", ErrorMessage = "Cellphone must be numeric")]
         //  [Range(0000000000,9999999999, ErrorMessage ="Must be 10 digits")]
         [RegularExpression("[0].*", ErrorMessage = "Invalid Cellphone Number Provided")]
         [StringLength(10)]
         public string CellNumber { get; set; }
 
-        [Required]
+        //[Required]
         public string HomeLanguage { get; set; }
         [Required]
         public string PhysicalAddress { get; set; }
@@ -79,6 +79,9 @@ namespace DVTR.Models
         public int UserId { get; set; }
 
     }
+
+  
+
 
     public class ApplicantContractMetadata
     {

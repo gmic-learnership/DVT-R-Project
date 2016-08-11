@@ -10,6 +10,8 @@ namespace DVTR.DVTR.DAL
     [MetadataType(typeof(UserMetadata))]
     public  partial class User
     {
+        public bool RegistrationFailed { get; set; }
+
     }
 
     [MetadataType(typeof(PersonMetadata))]
@@ -25,6 +27,7 @@ namespace DVTR.DVTR.DAL
     [MetadataType(typeof(ApplicationInfoMetadata))]
     public partial class ApplicationInfo
     {
+       
     }
 
     [MetadataType(typeof(EducationMetadata))]
