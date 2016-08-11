@@ -10,10 +10,11 @@ using System.Web.Mvc;
 
 namespace DVTR.Controllers
 {
-    public class ApplicationController : Controller
+    public class ApplicationController : BaseController
     {
         DvtRecruitEntities db = new DvtRecruitEntities();
         InsertRepo rep = new InsertRepo();
+        UserRepository userRep = new UserRepository();
         // GET: Application
 
         public ActionResult SavePerson()
@@ -120,7 +121,11 @@ namespace DVTR.Controllers
 
         public ActionResult SaveEducation()
         {
-            return View("SaveEducation", new Education());
+            Education education = new Education();
+
+            education.MyEducationList = userRep.GetUserEductionList((int)Session["personId"]);
+
+            return View("SaveEducation", education);
         }
 
         [HttpPost]
@@ -135,7 +140,14 @@ namespace DVTR.Controllers
                     education.PersonId = Convert.ToInt32(personId);
                     rep.InsertEducation(education);
                     rep.Save();
-                    return RedirectToAction("SaveNextOfKin");
+                    if (education.addMoreFlag != "1")
+                    {
+                        return RedirectToAction("SaveNextOfKin");
+                    }
+                    else
+                    {
+                        return RedirectToAction("SaveEducation");
+                    }
                 }
             }
             catch (Exception)

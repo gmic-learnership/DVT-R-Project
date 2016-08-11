@@ -33,6 +33,27 @@ namespace DVTR.DVTR.DAL
     [MetadataType(typeof(EducationMetadata))]
     public partial class Education
     {
+        public string addMoreFlag { get; set; }
+
+        private List<Education> myEducationList;
+
+        public List<Education> MyEducationList
+        {
+            get
+            {
+                if (myEducationList == null)
+                {
+                    myEducationList = new List<Education>();   
+                }
+                return myEducationList;
+            }
+            set { myEducationList = value; }
+        }
+
+
+
+        //public List<Education> myEducationList
+        //{ get; set; }
     }
 
     [MetadataType(typeof(NextOfKinMetadata))]

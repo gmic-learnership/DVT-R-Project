@@ -37,6 +37,7 @@ namespace DVTR.DVTR.BL
         {
             db.Educations.Add(education);
         }
+        
 
         public void InsertNextOfKin(NextOfKin nextOfKin)
         {
