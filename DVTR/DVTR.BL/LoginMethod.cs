@@ -42,5 +42,19 @@ namespace DVTR.BL
 
         }
 
+        public static List<EmploymentType> getEmploymentType()
+        {
+            List<EmploymentType> empType = null;
+            using (DvtRecruitEntities db = new DvtRecruitEntities())
+            {
+
+
+
+                empType = (from y in db.EmploymentTypes select y).ToList();
+            }
+               
+                return empType;
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using DVTR.DVTR.BL;
+﻿using DVTR.BL;
+using DVTR.DVTR.BL;
 using DVTR.DVTR.DAL;
 using System;
 using System.Collections.Generic;
@@ -97,20 +98,27 @@ namespace DVTR.Controllers
         }
 
         public ActionResult SaveContract()
-        {    ViewBag.EmploymentTypeId = new SelectList(db.EmploymentTypes, "EmploymentTypeId", "EmploymentType1");
+        {    //ViewBag.EmploymentTypeId = new SelectList(db.EmploymentTypes, "EmploymentTypeId", "EmploymentType1");
+             // ViewBag.GenderId = new SelectList(db.Genders, "GenderId", "Gender1");
+             // ViewBag.EmploymentTypeId = new SelectList(db.EmploymentTypes, "EmploymentTypeId","EmploymentType1");
+             //ViewBag.RaceId = new SelectList(db.Races, "RaceId", "Race1");
+            List<EmploymentType> empTp = new List<EmploymentType>();
+            empTp = db.EmploymentTypes.ToList();
+            ViewBag.EmpTypes = empTp;
 
-
-            //ViewBag.RaceId = new SelectList(db.Races, "RaceId", "Race1");
             return View();
         }
 
         [HttpPost]
         public ActionResult SaveContract(ApplicantContract applicantContract)
         {
-           // Session["applicantContract"] = applicantContract;
-           
+            // List<EmploymentType> empsType = LoginMethod.getEmploymentType();
+      
 
-                var personId = Session["personId"];
+            // Session["applicantContract"] = applicantContract;
+
+
+            var personId = Session["personId"];
                 applicantContract.PersonId = Convert.ToInt32(personId);
                 rep.InsertApplicantContract(applicantContract);
                 rep.Save();

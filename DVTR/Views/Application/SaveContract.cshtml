@@ -1,5 +1,5 @@
 ﻿@model DVTR.DVTR.DAL.ApplicantContract
-
+@using DVTR.DVTR.DAL
 @{
     ViewBag.Title = "ApplicantContract";
 }
@@ -79,22 +79,36 @@
                 @Html.ValidationMessageFor(model => model.OtherIndContribution, "", new { @class = "text-danger" })
             </div>
         </div>
+        @{
 
-        @*<div class="form-group">
-                @Html.LabelFor(model => model.CurrentEmplTypeId, "CurrentEmplTypeId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("CurrentEmplTypeId", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.CurrentEmplTypeId, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
+            var empTypes = (List<EmploymentType>)ViewBag.EmpTypes;
+        }
+        <div class="form-group">
+            <label class="col-md-4">Current Employment Type</label>
+            <div class="col-md-8">
+                <select name="CurrentEmplTypeId" class="form-control">
+                    @foreach (var item in empTypes)
+                   {
+                        <option value="@item.EmploymentTypeId">@item.EmploymentType1</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.CurrentEmplTypeId, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-        @*<div class="form-group">
-                @Html.LabelFor(model => model.ExpectedEmpTypeId, "ExpectedEmpTypeId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("ExpectedEmpTypeId", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.ExpectedEmpTypeId, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
+
+        <div class="form-group">
+            <label class="col-md-4">Expected Employment Type</label>
+            <div class="col-md-8">
+                <select name="ExpectedEmpTypeId" class="form-control">
+                @foreach (var item in empTypes)
+                {
+                    <option value="@item.EmploymentTypeId">@item.EmploymentType1</option>
+                }
+                </select>
+                @Html.ValidationMessageFor(model => model.ExpectedEmpTypeId, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         <div class="form-group">
             <label class="col-md-4">Notice period</label>

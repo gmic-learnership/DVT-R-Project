@@ -80,8 +80,8 @@
             <div class="form-group">
                 <label class="col-md-4">Home Language</label>
                 <div class="col-md-8">
-                   @Html.DropDownList("languages", new SelectList(Enum.GetValues(typeof(DVTR.Models.EnumClass.languages ))), "Select Language", new { @class = "form-control" })
-                   @* @Html.EditorFor(model => model.HomeLanguage, new { htmlAttributes = new { @class = "form-control" } })*@
+                   @*@Html.DropDownList("languages", new SelectList(Enum.GetValues(typeof(DVTR.Models.EnumClass.languages ))), "Select Language", new { @class = "form-control" })*@
+                    @Html.EditorFor(model => model.HomeLanguage, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.HomeLanguage, "", new { @class = "text-danger" })
                 </div>
             </div>
