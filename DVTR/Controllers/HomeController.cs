@@ -125,31 +125,44 @@ namespace DVTR.Controllers
         [HttpPost]
         public ActionResult login(User Getuser, string returnUrl1)
         {
-            
-                List<User> mylist = LoginMethod.GetUserPassword(Getuser.Password,Getuser.UserName);
 
-              
-                foreach (var item in mylist)
+            List<User> mylist = LoginMethod.GetUserPassword(Getuser.Password, Getuser.UserName);
+            List<Person> person = LoginMethod.GetPersonID(mylist);
+            if (person == null)
+            {
+                ModelState.AddModelError("", "invalid credentials ");
+            }
+            else
+            {
+                foreach (var item in person)
                 {
-                    if (string.IsNullOrEmpty(item.UserName))
+                    Session["personId"] = item.PersonId;
+                }
+            }
+        
+
+            foreach (var item in mylist)
+            {
+                if (string.IsNullOrEmpty(item.UserName))
+                {
+                    ModelState.AddModelError("", "Incorrect username ");
+                }
+                else
+                {
+                    if (Getuser.Password.Equals(item.Password))
                     {
-                        ModelState.AddModelError("", "Incorrect username ");
+                        FormsAuthentication.SetAuthCookie(Getuser.UserName, false);
+
+                        Session["Username"] = item.UserId;
+
+                        return RedirectToAction("LoggedInMenu");
                     }
                     else
                     {
-                        if (Getuser.Password.Equals(item.Password))
-                        {
-                            FormsAuthentication.SetAuthCookie(Getuser.UserName, false);
-
-                            Session["Username"] =item.UserId;
-                            return RedirectToAction("LoggedInMenu");
-                        }
-                        else
-                        {
-                            ModelState.AddModelError("", "Incorrect password ");
-                        }
+                        ModelState.AddModelError("", "Incorrect password ");
                     }
-                
+                }
+
             }
             return View(Getuser);
         }
@@ -157,8 +170,8 @@ namespace DVTR.Controllers
         [HttpGet]
         public ActionResult RetrieveInformation()
         {
-           
-            User user = dbContext.Users.Find( Session["Username"]);
+
+            User user = dbContext.Users.Find(Session["Username"]);
             return View(user);
 
         }

@@ -31,6 +31,7 @@
         <AssociationConnector Association="DvtRecruitModel.FK_Person_User" ManuallyRouted="false" />
         <AssociationConnector Association="DvtRecruitModel.FK_ProjectSynopsis_Person" ManuallyRouted="false" />
         <AssociationConnector Association="DvtRecruitModel.FK_References_Person" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DvtRecruitModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

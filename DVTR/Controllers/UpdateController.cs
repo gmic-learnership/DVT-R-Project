@@ -19,7 +19,7 @@ namespace DVTR.Controllers
         public ActionResult UpdatePerson()
         {
             Person user = null;
-            int num = Convert.ToInt32(Session["Username"]);
+            int num = Convert.ToInt32(Session["personId"]);
             List<Person> userID = (from x in dbContext.People where x.UserId ==num select x).ToList();
             foreach (var item in userID)
             {
@@ -44,11 +44,11 @@ namespace DVTR.Controllers
         public ActionResult UpdateEducation()
         {
             Education user = null;
-            int num = Convert.ToInt32(Session["Username"]);
+            int num = Convert.ToInt32(Session["personId"]);
             List<Education> userID = (from x in dbContext.Educations where x.PersonId == num select x).ToList();
             foreach (var item in userID)
             {
-                user = dbContext.Educations.Find(item.PersonId);
+                user = dbContext.Educations.Find(item.EducationId);
             }
             return View(user);
 
@@ -71,7 +71,7 @@ namespace DVTR.Controllers
         {
 
             ApplicantInfo  user = null;
-            int num = Convert.ToInt32(Session["Username"]);
+            int num = Convert.ToInt32(Session["personId"]);
             List<ApplicantInfo> userID = (from x in dbContext.ApplicantInfoes  where x.PersonId == num select x).ToList();
             foreach (var item in userID)
             {
@@ -98,7 +98,7 @@ namespace DVTR.Controllers
         public ActionResult ProjectSynopsis()
         {
             ProjectSynopsi  user = null;
-            int num = Convert.ToInt32(Session["Username"]);
+            int num = Convert.ToInt32(Session["personId"]);
             List<ProjectSynopsi > userID = (from x in dbContext.ProjectSynopsis  where x.PersonId == num select x).ToList();
             foreach (var item in userID)
             {
@@ -124,7 +124,7 @@ namespace DVTR.Controllers
         public ActionResult NextOfKin()
         {
             NextOfKin user = null;
-            int num = Convert.ToInt32(Session["Username"]);
+            int num = Convert.ToInt32(Session["personId"]);
             List<NextOfKin> userID = (from x in dbContext.NextOfKins where x.PersonId == num select x).ToList();
             foreach (var item in userID)
             {

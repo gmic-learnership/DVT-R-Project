@@ -101,6 +101,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\dvt-academy-white.png" />
+    <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\Site.css" />
     <Content Include="DVTR.DAL\DVTRecruit.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -180,9 +182,11 @@
     <Compile Include="DVTR.DAL\Gender.cs">
       <DependentUpon>DVTRecruit.tt</DependentUpon>
     </Compile>
+    <Compile Include="DVTR.DAL\Metadata.cs" />
     <Compile Include="DVTR.DAL\NextOfKin.cs">
       <DependentUpon>DVTRecruit.tt</DependentUpon>
     </Compile>
+    <Compile Include="DVTR.DAL\PartialClasses.cs" />
     <Compile Include="DVTR.DAL\Person.cs">
       <DependentUpon>DVTRecruit.tt</DependentUpon>
     </Compile>
@@ -193,6 +197,9 @@
       <DependentUpon>DVTRecruit.tt</DependentUpon>
     </Compile>
     <Compile Include="DVTR.DAL\Reference.cs">
+      <DependentUpon>DVTRecruit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DVTR.DAL\sysdiagram.cs">
       <DependentUpon>DVTRecruit.tt</DependentUpon>
     </Compile>
     <Compile Include="DVTR.DAL\User.cs">
@@ -224,7 +231,6 @@
     <Content Include="Views\Application\Done.cshtml" />
     <Content Include="Views\User\SignUp.cshtml" />
     <Content Include="Views\Application\SavePerson.cshtml" />
-    <Content Include="Views\Application\SaveContract.cshtml" />
     <Content Include="Views\Application\SaveProjectSynopsis.cshtml" />
     <Content Include="Views\Update\ApplicantInformation.cshtml" />
     <Content Include="Views\Update\NextOfKin.cshtml" />
@@ -250,6 +256,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\RetrieveInformation.cshtml" />
     <Content Include="Views\Home\UpdateMainMenu.cshtml" />
+    <Content Include="Views\Application\SaveContract.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

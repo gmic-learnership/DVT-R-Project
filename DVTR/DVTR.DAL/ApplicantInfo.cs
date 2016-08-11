@@ -16,7 +16,7 @@ namespace DVTR.DVTR.DAL
     {
         public int ApplicantInfoId { get; set; }
         public string WorkPermitNumber { get; set; }
-        public System.DateTime WorkPermitEndDate { get; set; }
+        public Nullable<System.DateTime> WorkPermitEndDate { get; set; }
         public string Health { get; set; }
         public string DriversLicense { get; set; }
         public string OwnTransport { get; set; }
@@ -25,14 +25,14 @@ namespace DVTR.DVTR.DAL
         public string CurrentWorkLocation { get; set; }
         public string CurrentJobTitle { get; set; }
         public string PreferredJobTitle { get; set; }
-        public bool PrefJhbCbd { get; set; }
-        public bool PrefJhbNorth { get; set; }
-        public bool PrefJhbSouth { get; set; }
-        public bool PrefJhbWest { get; set; }
-        public bool PrefMidrand { get; set; }
-        public bool PrefPretoria { get; set; }
-        public bool RelocateRsa { get; set; }
-        public bool RelocateInternational { get; set; }
+        public Nullable<bool> PrefJhbCbd { get; set; }
+        public Nullable<bool> PrefJhbNorth { get; set; }
+        public Nullable<bool> PrefJhbSouth { get; set; }
+        public Nullable<bool> PrefJhbWest { get; set; }
+        public Nullable<bool> PrefMidrand { get; set; }
+        public Nullable<bool> PrefPretoria { get; set; }
+        public Nullable<bool> RelocateRsa { get; set; }
+        public Nullable<bool> RelocateInternational { get; set; }
     
         public virtual Person Person { get; set; }
     }

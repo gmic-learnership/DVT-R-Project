@@ -30,7 +30,7 @@ namespace DVTR.DVTR.DAL
         public string Maidenname { get; set; }
         public string Fullname { get; set; }
         public string Surname { get; set; }
-        public int IdentityNumber { get; set; }
+        public string IdentityNumber { get; set; }
         public int GenderId { get; set; }
         public int RaceID { get; set; }
         public System.DateTime DateOfBirth { get; set; }

@@ -5,19 +5,19 @@
       <PropertyRef Name="ApplicantContractId" />
     </Key>
     <Property Name="ApplicantContractId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CurrentGrossSalary" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="CurrentPerfomanceBonus" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="MedicalAidEmpContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="MedicalAidIndContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ProvidentPensionEmpContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ProvidentPensionIndContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="OtherEmpContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="OtherIndContribution" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CurrentGrossSalary" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CurrentPerfomanceBonus" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedicalAidEmpContribution" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedicalAidIndContribution" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProvidentPensionEmpContribution" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProvidentPensionIndContribution" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OtherEmpContribution" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OtherIndContribution" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="CurrentEmplTypeId" Type="int" Nullable="false" />
     <Property Name="ExpectedEmpTypeId" Type="int" Nullable="false" />
     <Property Name="NoticePeriod" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PermanentSalaryExpectation" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ContractSalaryExpectation" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PermanentSalaryExpectation" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ContractSalaryExpectation" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="PersonId" Type="int" Nullable="false" />
     <Property Name="RecentlySentCvToOtherComp" Type="varchar" MaxLength="500" Nullable="false" />
     <Property Name="InterviewsScheduled" Type="varchar" MaxLength="50" Nullable="false" />
@@ -29,24 +29,24 @@
       <PropertyRef Name="ApplicantInfoId" />
     </Key>
     <Property Name="ApplicantInfoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="WorkPermitNumber" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="WorkPermitEndDate" Type="date" Nullable="false" />
-    <Property Name="Health" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="DriversLicense" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="OwnTransport" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="OtherLaguages" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="WorkPermitNumber" Type="varchar" MaxLength="50" />
+    <Property Name="WorkPermitEndDate" Type="date" />
+    <Property Name="Health" Type="varchar" MaxLength="100" />
+    <Property Name="DriversLicense" Type="varchar" MaxLength="50" />
+    <Property Name="OwnTransport" Type="varchar" MaxLength="50" />
+    <Property Name="OtherLaguages" Type="varchar" MaxLength="100" />
     <Property Name="PersonId" Type="int" Nullable="false" />
-    <Property Name="CurrentWorkLocation" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="CurrentJobTitle" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PreferredJobTitle" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PrefJhbCbd" Type="bit" Nullable="false" />
-    <Property Name="PrefJhbNorth" Type="bit" Nullable="false" />
-    <Property Name="PrefJhbSouth" Type="bit" Nullable="false" />
-    <Property Name="PrefJhbWest" Type="bit" Nullable="false" />
-    <Property Name="PrefMidrand" Type="bit" Nullable="false" />
-    <Property Name="PrefPretoria" Type="bit" Nullable="false" />
-    <Property Name="RelocateRsa" Type="bit" Nullable="false" />
-    <Property Name="RelocateInternational" Type="bit" Nullable="false" />
+    <Property Name="CurrentWorkLocation" Type="varchar" MaxLength="100" />
+    <Property Name="CurrentJobTitle" Type="varchar" MaxLength="50" />
+    <Property Name="PreferredJobTitle" Type="varchar" MaxLength="50" />
+    <Property Name="PrefJhbCbd" Type="bit" />
+    <Property Name="PrefJhbNorth" Type="bit" />
+    <Property Name="PrefJhbSouth" Type="bit" />
+    <Property Name="PrefJhbWest" Type="bit" />
+    <Property Name="PrefMidrand" Type="bit" />
+    <Property Name="PrefPretoria" Type="bit" />
+    <Property Name="RelocateRsa" Type="bit" />
+    <Property Name="RelocateInternational" Type="bit" />
   </EntityType>
   <EntityType Name="Application">
     <Key>
@@ -112,7 +112,7 @@
     <Property Name="Maidenname" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Fullname" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="Surname" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="IdentityNumber" Type="int" Nullable="false" />
+    <Property Name="IdentityNumber" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="GenderId" Type="int" Nullable="false" />
     <Property Name="RaceID" Type="int" Nullable="false" />
     <Property Name="DateOfBirth" Type="date" Nullable="false" />
@@ -160,6 +160,16 @@
     <Property Name="Period" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="PersonId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="UserId" />
@@ -168,7 +178,7 @@
     <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="EmailAddress" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_ApplicantContract_EmploymentType">
     <End Role="EmploymentType" Type="Self.EmploymentType" Multiplicity="1" />
@@ -339,6 +349,7 @@
     <EntitySet Name="ProjectSynopsis" EntityType="Self.ProjectSynopsis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Race" EntityType="Self.Race" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="References" EntityType="Self.References" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ApplicantContract_EmploymentType" Association="Self.FK_ApplicantContract_EmploymentType">
       <End Role="EmploymentType" EntitySet="EmploymentType" />

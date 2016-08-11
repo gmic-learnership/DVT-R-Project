@@ -38,5 +38,6 @@ namespace DVTR.DVTR.DAL
         public DbSet<Race> Races { get; set; }
         public DbSet<Reference> References { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

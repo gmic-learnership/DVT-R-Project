@@ -10,23 +10,37 @@ namespace DVTR.BL
     {
         public static List<User> GetUserPassword(string loginName,string username)
         {
+            
+
             List<User> mylist = null;
             using (DvtRecruitEntities db = new DvtRecruitEntities())
             {
                var user = db.Users.Where(u => u.UserName.ToLower().Equals(loginName));
-                /*
-                if (user.Any())
-                {
-                    return user.FirstOrDefault().Password;
-                }
-                else
-                {
-                    return string.Empty;
-                }*/
+          
                 mylist = (from x in db.Users where x.UserName == username && x.Password == loginName select x).ToList();
+
+               
             }
             return mylist;
             
         }
+        /////////////////////////////////////////////////////////////
+        public static List<Person> GetPersonID(List<User> userList)
+        {
+            List<Person> personList = null;
+            using (DvtRecruitEntities db = new DvtRecruitEntities())
+            {
+              
+
+                foreach (var item in userList)
+                {
+                    personList = (from y in db.People where y.UserId == item.UserId select y).ToList();
+                }
+
+            }
+            return personList;
+
+        }
+
     }
 }

@@ -29,16 +29,16 @@ namespace DVTR.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    person.UserId = 2;
+               // if (ModelState.IsValid)
+                //{
+                  person.UserId =Convert.ToInt32( Session["Username"]);
                     //person.PersonId = 2;
                     rep.InsertPerson(person);
                     rep.Save();
                     var personId = person.PersonId;
                     Session["personId"] = personId;
                     return RedirectToAction("SaveApplicantInfo");
-                }
+               // }
             }
             catch (DbEntityValidationException dbEx)
             {
@@ -96,14 +96,17 @@ namespace DVTR.Controllers
         }
 
         public ActionResult SaveContract()
-        {
+        {    ViewBag.EmploymentTypeId = new SelectList(db.EmploymentTypes, "EmploymentTypeId", "EmploymentType1");
+
+
+            //ViewBag.RaceId = new SelectList(db.Races, "RaceId", "Race1");
             return View();
         }
 
         [HttpPost]
         public ActionResult SaveContract(ApplicantContract applicantContract)
         {
-            Session["applicantContract"] = applicantContract;
+           // Session["applicantContract"] = applicantContract;
            
 
                 var personId = Session["personId"];

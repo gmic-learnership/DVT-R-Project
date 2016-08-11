@@ -857,6 +857,7 @@ pre code {
 .col-lg-11,
 .col-lg-12 {
   position: relative;
+  text-align: right;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;

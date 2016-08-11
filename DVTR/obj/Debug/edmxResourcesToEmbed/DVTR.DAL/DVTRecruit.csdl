@@ -5,19 +5,19 @@
       <PropertyRef Name="ApplicantContractId" />
     </Key>
     <Property Name="ApplicantContractId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CurrentGrossSalary" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="CurrentPerfomanceBonus" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="MedicalAidEmpContribution" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="MedicalAidIndContribution" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ProvidentPensionEmpContribution" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ProvidentPensionIndContribution" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="OtherEmpContribution" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="OtherIndContribution" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CurrentGrossSalary" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CurrentPerfomanceBonus" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedicalAidEmpContribution" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedicalAidIndContribution" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProvidentPensionEmpContribution" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProvidentPensionIndContribution" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OtherEmpContribution" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OtherIndContribution" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="CurrentEmplTypeId" Type="Int32" Nullable="false" />
     <Property Name="ExpectedEmpTypeId" Type="Int32" Nullable="false" />
     <Property Name="NoticePeriod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="PermanentSalaryExpectation" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ContractSalaryExpectation" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PermanentSalaryExpectation" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ContractSalaryExpectation" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="PersonId" Type="Int32" Nullable="false" />
     <Property Name="RecentlySentCvToOtherComp" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="InterviewsScheduled" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -32,24 +32,24 @@
       <PropertyRef Name="ApplicantInfoId" />
     </Key>
     <Property Name="ApplicantInfoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="WorkPermitNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="WorkPermitEndDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Health" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="DriversLicense" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="OwnTransport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="OtherLaguages" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WorkPermitNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WorkPermitEndDate" Type="DateTime" Precision="0" />
+    <Property Name="Health" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DriversLicense" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OwnTransport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OtherLaguages" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="PersonId" Type="Int32" Nullable="false" />
-    <Property Name="CurrentWorkLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CurrentJobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="PreferredJobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="PrefJhbCbd" Type="Boolean" Nullable="false" />
-    <Property Name="PrefJhbNorth" Type="Boolean" Nullable="false" />
-    <Property Name="PrefJhbSouth" Type="Boolean" Nullable="false" />
-    <Property Name="PrefJhbWest" Type="Boolean" Nullable="false" />
-    <Property Name="PrefMidrand" Type="Boolean" Nullable="false" />
-    <Property Name="PrefPretoria" Type="Boolean" Nullable="false" />
-    <Property Name="RelocateRsa" Type="Boolean" Nullable="false" />
-    <Property Name="RelocateInternational" Type="Boolean" Nullable="false" />
+    <Property Name="CurrentWorkLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentJobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PreferredJobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrefJhbCbd" Type="Boolean" />
+    <Property Name="PrefJhbNorth" Type="Boolean" />
+    <Property Name="PrefJhbSouth" Type="Boolean" />
+    <Property Name="PrefJhbWest" Type="Boolean" />
+    <Property Name="PrefMidrand" Type="Boolean" />
+    <Property Name="PrefPretoria" Type="Boolean" />
+    <Property Name="RelocateRsa" Type="Boolean" />
+    <Property Name="RelocateInternational" Type="Boolean" />
     <NavigationProperty Name="Person" Relationship="Self.FK_ApplicantInfo_Person" FromRole="ApplicantInfo" ToRole="Person" />
   </EntityType>
   <EntityType Name="Application">
@@ -123,7 +123,7 @@
     <Property Name="Maidenname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IdentityNumber" Type="Int32" Nullable="false" />
+    <Property Name="IdentityNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="GenderId" Type="Int32" Nullable="false" />
     <Property Name="RaceID" Type="Int32" Nullable="false" />
     <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
@@ -193,7 +193,7 @@
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="People" Relationship="Self.FK_Person_User" FromRole="User" ToRole="Person" />
   </EntityType>
   <Association Name="FK_ApplicantContract_EmploymentType">
@@ -418,5 +418,16 @@
       <End Role="Person" EntitySet="People" />
       <End Role="References" EntitySet="References" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="DvtRecruitModel.sysdiagram" />
   </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>
