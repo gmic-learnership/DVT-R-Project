@@ -216,7 +216,7 @@ D:\DVT-Recruitment\DVTR\bin\System.Web.Mvc.xml
 D:\DVT-Recruitment\DVTR\obj\Debug\DVTR.csprojResolveAssemblyReference.cache
 D:\DVT-Recruitment\DVTR\obj\Debug\DVTR.dll
 D:\DVT-Recruitment\DVTR\obj\Debug\DVTR.pdb
-<<<<<<< HEAD
+
 C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\bin\roslyn\csc.exe
 C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -253,7 +253,7 @@ C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\bin\System.Web.Helpers.xml
 C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\bin\System.Web.Mvc.xml
 C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\obj\Debug\DVTR.dll
 C:\Users\BMAHLANGU\Desktop\DVT-Recruitment\DVTR\obj\Debug\DVTR.pdb
-=======
+
 C:\!Source\DVTRV3.1\DVT-R-Project\DVTR\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\!Source\DVTRV3.1\DVT-R-Project\DVTR\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\!Source\DVTRV3.1\DVT-R-Project\DVTR\bin\roslyn\VBCSCompiler.exe.config
