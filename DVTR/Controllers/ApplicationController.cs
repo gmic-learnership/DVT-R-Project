@@ -123,6 +123,7 @@ namespace DVTR.Controllers
         {
             Education education = new Education();
 
+
             education.MyEducationList = userRep.GetUserEductionList((int)Session["personId"]);
 
             return View("SaveEducation", education);
