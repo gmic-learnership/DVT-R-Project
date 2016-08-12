@@ -36,7 +36,7 @@
                 <img src="~/Content/images/dvt-academy-white.png" alt="DVT RECRUITMENT" style="display:block; width:100%; height:auto; margin:0 auto;" />
             </div>
 
-    @if (Session["personId"] != null)
+    @if (Session["Username"] != null)
     {
             <div class="col-md-7 space">
                 <ul class="list-unstyled list-inline">
@@ -48,7 +48,7 @@
     }
 
             @{
-                if (Session["personId"] != null)
+                if (Session["Username"] != null)
                 {
                     <div class="col-md-3 space pull-right">
                         Welcome <strong>@Session["Name"]</strong>, <a href="~/Home/logout" style="font-weight:bold; text-decoration:underline;">Logout</a>.
