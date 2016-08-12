@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>ApplicantInfo</h4>
+        <h4>Applicant Information</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -193,8 +193,11 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <div class="col-md-12 space"><a onclick="javascript:history.go(-1)" href="/"><< Back to List</a></div>
+    </div>
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

@@ -8,6 +8,7 @@ using System.Linq;
 
 namespace DVTR.Controllers
 {
+    
     public class HomeController : Controller
     {
         DvtRecruitEntities dbContext = new DvtRecruitEntities();
@@ -117,8 +118,22 @@ namespace DVTR.Controllers
         //        return RedirectToAction("Index");
         //    }
         //}
-        public ActionResult login()
+
+
+
+
+        public ActionResult logout()
         {
+            FormsAuthentication.SignOut();
+            Session.Clear();
+            return RedirectToAction("login",new {signedOut=true });
+        }
+        public ActionResult login(bool? signedOut)
+        {
+            if (signedOut != null)
+            {
+                ViewBag.signedOut = true;
+            }
             return View();
         }
 
@@ -154,6 +169,8 @@ namespace DVTR.Controllers
                         FormsAuthentication.SetAuthCookie(Getuser.UserName, false);
 
                         Session["Username"] = item.UserId;
+                        Session["Name"] = item.FirstName;
+
 
                         return RedirectToAction("LoggedInMenu");
                     }

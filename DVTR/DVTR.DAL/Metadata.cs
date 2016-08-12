@@ -46,15 +46,15 @@ namespace DVTR.Models
         [MaxLength(13)]
         [MinLength(13)]
         //  [Range(13,13, ErrorMessage ="have 13 digits")]
-        public int IdentityNumber { get; set; }
+        public string IdentityNumber { get; set; }
         [Required]
         [DataType(DataType.Date),]
         [DisplayFormat(DataFormatString = "{YYYY/MM/dd}")]
         public System.DateTime DateOfBirth { get; set; }
         [Required]
-        //  [RegularExpression("^[0-9]*$", ErrorMessage = "Cellphone must be numeric")]
+          [RegularExpression("^[0]. [0-9]*$", ErrorMessage = "Cellphone must be numeric")]
         //  [Range(0000000000,9999999999, ErrorMessage ="Must be 10 digits")]
-        [RegularExpression("[0].*", ErrorMessage = "Invalid Cellphone Number Provided")]
+      //  [RegularExpression("[0].*", ErrorMessage = "Invalid Cellphone Number Provided")]
         [StringLength(10)]
         public string CellNumber { get; set; }
 
@@ -64,7 +64,9 @@ namespace DVTR.Models
         public string PhysicalAddress { get; set; }
         [Required]
         //  [Range(1000,9999, ErrorMessage ="Postal code is four characters long")]
-        [StringLength(4, ErrorMessage = "Postal code is 4 characters long")]
+        //  [StringLength(4, ErrorMessage = "Postal code is 4 characters long")]
+        [MaxLength(4,ErrorMessage ="Postal Code Must Be 4 Digits")]
+        [MinLength(4,ErrorMessage = "Postal Code Must Be 4 Digits")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "Postal code must be numeric")]
         [Display(Name = "Postal Code")]
         public string PostalCode { get; set; }
@@ -79,9 +81,6 @@ namespace DVTR.Models
         public int UserId { get; set; }
 
     }
-
-  
-
 
     public class ApplicantContractMetadata
     {

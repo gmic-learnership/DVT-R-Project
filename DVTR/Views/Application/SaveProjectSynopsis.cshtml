@@ -12,11 +12,11 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>ProjectSynopsi</h4>
+        <h4>Project Synopsis</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <label class="col-md-4"></label>
+            <label class="col-md-4">Company</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProjectDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Project Description</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProjectDescription, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProjectDescription, "", new { @class = "text-danger" })
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RoleOnProject, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Role On Project</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.RoleOnProject, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RoleOnProject, "", new { @class = "text-danger" })
@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProjectDuration, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Project Duration</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProjectDuration, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProjectDuration, "", new { @class = "text-danger" })
@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PrimaryStakeholders, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Primary Stake Holders</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PrimaryStakeholders, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PrimaryStakeholders, "", new { @class = "text-danger" })
@@ -56,7 +56,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ArtifactsProdused, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Artifects Produced</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ArtifactsProdused, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ArtifactsProdused, "", new { @class = "text-danger" })
@@ -64,7 +64,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Methodologies, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Methodologies</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Methodologies, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Methodologies, "", new { @class = "text-danger" })
@@ -72,31 +72,28 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TaskResponsibility, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="col-md-4">Task Responsibility</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TaskResponsibility, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TaskResponsibility, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PersonId, "PersonId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @*@Html.DropDownList("PersonId", null, htmlAttributes: new { @class = "form-control" })*@
-                @Html.ValidationMessageFor(model => model.PersonId, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Next" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <div class="col-md-12 space"><a onclick="javascript:history.go(-1)" href="/"><< Back to List</a></div>
+    </div>
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

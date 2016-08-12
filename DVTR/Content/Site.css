@@ -8,11 +8,18 @@
 .body-content { padding-left: 15px;
                 padding-right: 15px;
                 }
-
-footer {    background: #2b398b;
-            margin: -20px 0px;
+.carousel {     position:relative;
+                height: 460px;
+                margin-bottom:25px;
+                overflow: hidden;
+                }
+footer {    position: relative;
+            clear:both;
+            background: #2b398b;
+            margin: 25px 0px;
             color: #FFFFFF;
             padding: 15px 10px 10px;
+            text-align:center;
             }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -21,7 +28,13 @@ select,
 textarea {
     max-width: 280px;
 }
-.hdrTop { }
+.bg-header {    background: #454545;
+                }
+
+.hdrTop {   background:#f5b52e; 
+            width:100%;
+            padding:10px 0px 5px;
+            }
 
 .space { margin-top:50px;
 }

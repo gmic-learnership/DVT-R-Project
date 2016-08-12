@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace DVTR.Controllers
 {
+    
     public class ApplicationController : BaseController
     {
         DvtRecruitEntities db = new DvtRecruitEntities();
@@ -132,6 +133,7 @@ namespace DVTR.Controllers
             Education education = new Education();
 
 
+
             education.MyEducationList = userRep.GetUserEductionList((int)Session["personId"]);
 
             return View("SaveEducation", education);
@@ -164,7 +166,7 @@ namespace DVTR.Controllers
 
                 throw;
             }
-            return SavePerson();
+            return SaveEducation();
         }
 
         public ActionResult SaveNextOfKin()
