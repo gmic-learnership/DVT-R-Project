@@ -170,7 +170,7 @@ namespace DVTR.Controllers
 
                         Session["Username"] = item.UserId;
                         Session["Name"] = item.FirstName;
-
+                      
 
                         return RedirectToAction("LoggedInMenu");
                     }
